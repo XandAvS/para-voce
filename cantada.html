@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <style>
+         body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: #dadfe8;
+            }
+
+         a {
+            text-decoration: none;
+         }   
+
+         .box{
+            font-size: 20px;
+            color: white;
+            height: 250px;
+            width: 350px;
+            border-radius: 10px;
+            background: rgb(3, 69, 212);
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+         }
+
+         .buttons-container {
+
+            display: flex;
+            justify-content: space-around;
+            height: 50px;
+            width: 150px;
+
+         }
+
+         button {
+            height: 30px;
+            width: 50px;
+            background: white;
+            border-radius: 5px;
+            color: blue;
+            font-weight: 600;
+         }
+        </style>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pokédex</title>
+        <link rel="stylesheet" href="src/css/reset.css">
+        <link rel="stylesheet" href="src/css/global.css">
+        <link rel="stylesheet" href="src/css/cartao.css">
+        <link rel="stylesheet" href="src/css/listagem.css">
+        <link rel="stylesheet" href="src/css/responsivo.css">
+      
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+      
+    </head>
+    <body>
+        <div class="box">
+            <p>VALE UM BEIJO?</p>
+            <div class =buttons-container>
+                <button>
+                    <a href="index.html">Sim</a>
+                </button>
+                <button id="no">Não</button>
+            </div>
+        </div>  
+        
+        <script>
+            let button = document.getElementById('no');
+            let height = window.innerHeight - 50;
+            let width = window.innerWidth - 50;
+    
+            button.addEventListener('mouseover', function (){
+                button.style.position = "absolute";
+                button.style.top = Math.random() * height + "px";
+                button.style.left = Math.random() * width + "px";
+             })
+    
+        </script>
+    </body>
+    
+</html>
